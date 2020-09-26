@@ -145,8 +145,11 @@ static const int bitrateTable[] = {
         case 1080:
             resolution = 2;
             break;
-        case 2160:
+        case 1440:
             resolution = 3;
+            break;
+        case 2160:
+            resolution = 4;
             break;
     }
     
@@ -272,7 +275,7 @@ static const int bitrateTable[] = {
 }
 
 - (NSInteger) getChosenStreamHeight {
-    const int resolutionTable[] = { 360, 720, 1080, 2160 };
+    const int resolutionTable[] = { 360, 720, 1080, 1440, 2160 };
     return resolutionTable[[self.resolutionSelector selectedSegmentIndex]];
 }
 
